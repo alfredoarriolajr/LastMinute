@@ -51,7 +51,7 @@ List<CalendarEventData<Event>> _events = [
   ),
   CalendarEventData(
     date: _now.add(Duration(days: 1)),
-    startTime: DateTime(_now.year, _now.month, _now.day, 18),
+    startTime: DateTime(_now.year, _now.month, _now.day, 16),
     endTime: DateTime(_now.year, _now.month, _now.day, 19),
     event: Event(title: "Electrician Job"),
     title: "Electrician Job",
@@ -103,8 +103,8 @@ List<CalendarEventData<Event>> _events = [
         _now.subtract(Duration(days: 2)).month,
         _now.subtract(Duration(days: 2)).day,
         12),
-    event: Event(title: "Carbon monoxide detector"),
-    title: "Carbon monoxide detector",
+    event: Event(title: "Carbon monoxide Installation"),
+    title: "Carbon monoxide Installation",
     description: "Order 100 units.",
   ),
 ];
