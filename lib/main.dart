@@ -1,4 +1,7 @@
 import 'dart:ui';
+import 'dart:async';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 import 'package:calendar_view/calendar_view.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +13,10 @@ import 'widgets/responsive_widget.dart';
 
 DateTime get _now => DateTime.now();
 
-void main() {
+Future<void> main() async {
+  await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+);
   runApp(MyApp());
 }
 
@@ -103,8 +109,8 @@ List<CalendarEventData<Event>> _events = [
         _now.subtract(Duration(days: 2)).month,
         _now.subtract(Duration(days: 2)).day,
         12),
-    event: Event(title: "Carbon monoxide Installation"),
-    title: "Carbon monoxide Installation",
+    event: Event(title: "Carbon Monoxide Detector Installation"),
+    title: "Carbon Monoxide Detector Installation",
     description: "Order 100 units.",
   ),
 ];
